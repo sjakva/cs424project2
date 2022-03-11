@@ -7,15 +7,20 @@
 #    http://shiny.rstudio.com/
 #
 
+# Libraries/Imports
 library(shiny)
+library(lubridate)
+library(ggplot2)
+library(shinydashboard)
 
-# Define UI for application that draws a histogram
+# Define UI for application
+#   Should be a dashboard page, not fluid page
 ui <- fluidPage(
 
     # Application title
     titlePanel("Old Faithful Geyser Data"),
 
-    # Sidebar with a slider input for number of bins 
+    # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
             sliderInput("bins",
@@ -31,9 +36,21 @@ ui <- fluidPage(
         )
     )
 )
+# ui <- dashboardPage(
+#   
+#   # dashboardHeader(),
+#   # dashboardSidebar(),
+#   # dashboardBody(
+#   #   tabItems(
+#   #     tabItem(),
+#   #   )
+#   # )
+#   
+# )
 
-# Define server logic required to draw a histogram
-server <- function(input, output) {
+# Define server logic 
+#   session as a param allows access to information and functionality relating to the session
+server <- function(input, output, session) {
 
     output$distPlot <- renderPlot({
         # generate bins based on input$bins from ui.R
