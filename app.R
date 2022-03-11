@@ -12,6 +12,8 @@ library(shiny)
 library(lubridate)
 library(ggplot2)
 library(shinydashboard)
+library(plotly)
+library(leaflet)
 
 # Define UI for application
 #   Should be a dashboard page, not fluid page
