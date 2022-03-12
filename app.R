@@ -84,15 +84,15 @@ ui <- dashboardPage(
 
 # Define server logic
 #   session as a param allows access to information and functionality relating to the session
-# sumOfRidesPerYear = Halsted %>% group_by(year(newDate)) %>% summarise(sum = sum(rides))
+sumOfRidesPerYear = Halsted %>% group_by(year(newDate)) %>% summarise(sum = sum(rides))
 server <- function(input, output, session) {
   output$entryYear <- renderPlot({
     subset(Halsted, newDate > as.Date('2000-12-31')) %>%
       ggplot(aes(x=year(newDate), y=rides)) +
       geom_bar(stat = "identity", fill = "#88CCEE") +
       labs(x = "Years", y = "Number of Entries", title = "Entries per Year") +
-      theme_bw() 
-      # scale_y_continuous(expand = c(0, 0))#, limits = c(0, max(sumOfRidesPerYear$sum) * 1.05))
+      theme_bw() +
+      scale_y_continuous(expand = c(0, 0), limits = c(0, max(sumOfRidesPerYear$sum) * 1.05))
   })
   
 }
