@@ -20,31 +20,41 @@ library(DT)
 #------------------------------------
 # create intial dataframe
 stationsAll <- data.frame(
-  ï..station_id=c(),
-  stationname=c(),
-  date=c(),
-  daytype=c(),
-  rides=c(),
+  ï..station_id=integer(),
+  stationname=character(),
+  date=character(),
+  daytype=character(),
+  rides=integer(),
   stringsAsFactors = FALSE
 )
 # View(stationsAll)
 
+temp = list.files(pattern="*.tsv")
+allData = lapply(temp, read.delim)
+cta <- do.call(rbind, allData)
+view(cta)
+# tsvFiles = list.files(path = "./", pattern = "*.tsv", full.names = TRUE, recursive = FALSE)
+# lapply(tsvFiles, function(x) {
+#   # print(x)
+#   tmpTable <- read.table(file = x, sep = "\t", header = TRUE, quote = "", fill = FALSE)
+#   # View(tmpTable)
+#   # tmpTable -> as.data.frame(tmpTable) 
+#   rbind(tmpTable, stationsAll)
+# })
+# View(stationsAll)
 
-tsvFiles = list.files(path = "./", pattern = "*.tsv", full.names = TRUE, recursive = FALSE)
-lapply(tsvFiles, function(x) {
-  # print(x)
-  tmpTable <- read.table(file = x, sep = "\t", header = TRUE, quote = "", fill = FALSE, col.names=c("ï..station_id", "stationname", "date", "daytype", "rides"))
-  # View(tmpTable)
-  tmpTable -> as.data.frame.matrix(tmpTable)
-  rbind(stationsAll, tmpTable)
-})
-View(stationsAll)
-
+# stationsAll <- read.table(file = "./station_18th.tsv", sep = "\t", header = TRUE)
+# View(stationsAll)
+# for (row in 1:NROW(dataset)) {
+#   # print(dataset[[row]]$stationname[[1]][1])
+#   # write.csv(dataset[[row]], paste("./station_", gsub("/", "--",dataset[[row]]$stationname[[1]][1]), ".csv", sep = ""), row.names = FALSE)
+#   write.table(dataset[[row]], file = paste("./station_", gsub("/", "--",dataset[[row]]$stationname[[1]][1]), ".tsv", sep = ""), row.names=FALSE, quote = FALSE, sep="\t")
+# }
 
 #reading in data for halsted
 Halsted <-
   read.table(file = "./station_UIC-Halsted.tsv", sep = "\t", header = TRUE)
-View(Halsted)
+# View(Halsted)
 
 #converting date type to workable column
 newDate <- as.Date(Halsted$date, '%m/%d/%Y')
