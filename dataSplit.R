@@ -8,7 +8,7 @@ dataset <- split(bigData, bigData$stationname)
 for (row in 1:NROW(dataset)) {
   # print(dataset[[row]]$stationname[[1]][1])
   # write.csv(dataset[[row]], paste("./station_", gsub("/", "--",dataset[[row]]$stationname[[1]][1]), ".csv", sep = ""), row.names = FALSE)
-  write.table(dataset[[row]], file = paste("./station_", gsub("/", "--",dataset[[row]]$stationname[[1]][1]), ".tsv", sep = ""), row.names=FALSE, sep="\t")
+  write.table(dataset[[row]], file = paste("./station_", gsub("/", "--",dataset[[row]]$stationname[[1]][1]), ".tsv", sep = ""), row.names=FALSE, quote = FALSE, sep="\t")
 }
 
 

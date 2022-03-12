@@ -87,7 +87,7 @@ ui <- dashboardPage(
 # sumOfRidesPerYear = Halsted %>% group_by(year(newDate)) %>% summarise(sum = sum(rides))
 server <- function(input, output, session) {
   output$entryYear <- renderPlot({
-    subset(Halsted, newDate > as.Date("2000-12-31")) %>%
+    subset(Halsted, newDate > as.Date('2000-12-31')) %>%
       ggplot(aes(x=year(newDate), y=rides)) +
       geom_bar(stat = "identity", fill = "#88CCEE") +
       labs(x = "Years", y = "Number of Entries", title = "Entries per Year") +
