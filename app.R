@@ -16,6 +16,7 @@ library(plotly)
 library(leaflet)
 library(tidyverse)
 library(DT)
+library(data.table)
 
 #------------------------------------
 # create intial dataframe
@@ -37,11 +38,40 @@ stationsAll <- do.call(rbind, dataStations)
 newD <- as.Date(stationsAll$date, '%m/%d/%Y')
 stationsAll$date <- NULL
 stationsAll$date <- newD
-# stationsAll %>% 
-#   rename(
-#     date = newD
-#     )
 view(stationsAll)
+
+# load in station id with long and lat
+xData <- fread("CTA_-_System_Information_-_List_of__L__Stops.csv",
+               select = c("MAP_ID", "Location"))
+
+
+ # Loops through every station id and prints out location
+locData <- data.frame(
+  MAP_ID=c(),
+  Location=c(),
+  Latitude=c(),
+  Longitude=c(),
+  stringsAsFactors = FALSE
+)
+
+for (row in 1:NROW(xData)) {
+  statID = xData[[1]][row]
+  print(statID)
+  locationString <- gsub("[(,)]", "", xData[[2]][row])
+  # print(locationString)
+  lat <- word(locationString, 1, sep=fixed(' '))
+  long <- word(locationString, 2, sep=fixed(' '))
+  print("lat is")
+  print(lat)
+  print("long is")
+  print(long)
+  # xData[statID][row]$lat <- lat
+  # xData[statID][row]$long <- long
+  tempRow <- c(statID, locationString, lat, long)
+  # names(tempRow) <- c("MAP_ID", "Location", "Latitude", "Longitude")
+  rbind(locData, tempRow)
+}
+view(locData)
 
 #reading in data for halsted
 Halsted <-
