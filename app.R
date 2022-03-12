@@ -57,6 +57,7 @@ locData <- data.frame(
 for (row in 1:NROW(xData)) {
   statID = xData[[1]][row]
   print(statID)
+  locale <- xData[[2]][row]
   locationString <- gsub("[(,)]", "", xData[[2]][row])
   # print(locationString)
   lat <- word(locationString, 1, sep=fixed(' '))
@@ -67,10 +68,11 @@ for (row in 1:NROW(xData)) {
   print(long)
   # xData[statID][row]$lat <- lat
   # xData[statID][row]$long <- long
-  tempRow <- c(statID, locationString, lat, long)
+  tempRow <- c(statID, locale, lat, long)
   # names(tempRow) <- c("MAP_ID", "Location", "Latitude", "Longitude")
-  rbind(locData, tempRow)
+  locData <- rbind(locData, tempRow)
 }
+names(locData) <- c("MAP_ID", "Location", "Latitude", "Longitude")
 view(locData)
 
 #reading in data for halsted
