@@ -29,27 +29,19 @@ stationsAll <- data.frame(
 )
 # View(stationsAll)
 
-temp = list.files(pattern="*.tsv")
-allData = lapply(temp, read.delim)
-cta <- do.call(rbind, allData)
-view(cta)
-# tsvFiles = list.files(path = "./", pattern = "*.tsv", full.names = TRUE, recursive = FALSE)
-# lapply(tsvFiles, function(x) {
-#   # print(x)
-#   tmpTable <- read.table(file = x, sep = "\t", header = TRUE, quote = "", fill = FALSE)
-#   # View(tmpTable)
-#   # tmpTable -> as.data.frame(tmpTable) 
-#   rbind(tmpTable, stationsAll)
-# })
-# View(stationsAll)
+tsvFileList <- list.files(pattern="*.tsv")
+dataStations <- lapply(tsvFileList, read.delim)
+stationsAll <- do.call(rbind, dataStations)
 
-# stationsAll <- read.table(file = "./station_18th.tsv", sep = "\t", header = TRUE)
-# View(stationsAll)
-# for (row in 1:NROW(dataset)) {
-#   # print(dataset[[row]]$stationname[[1]][1])
-#   # write.csv(dataset[[row]], paste("./station_", gsub("/", "--",dataset[[row]]$stationname[[1]][1]), ".csv", sep = ""), row.names = FALSE)
-#   write.table(dataset[[row]], file = paste("./station_", gsub("/", "--",dataset[[row]]$stationname[[1]][1]), ".tsv", sep = ""), row.names=FALSE, quote = FALSE, sep="\t")
-# }
+
+newD <- as.Date(stationsAll$date, '%m/%d/%Y')
+stationsAll$date <- NULL
+stationsAll$date <- newD
+# stationsAll %>% 
+#   rename(
+#     date = newD
+#     )
+view(stationsAll)
 
 #reading in data for halsted
 Halsted <-
