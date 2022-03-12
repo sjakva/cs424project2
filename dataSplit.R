@@ -1,20 +1,14 @@
 bigData = read.csv("./CTA_-_Ridership_-__L__Station_Entries_-_Daily_Totals.csv")
-#mpExpenses2012 is the large dataframe containing data for each MP
 
+# turn overall excel sheet into a list of lists subsetted by station names
 dataset <- split(bigData, bigData$stationname)
-View(dataset)
+# View(dataset)
 
-
-# #Get the list of unique MP names
-for (name in levels(bigData$stationname)){
-  #Subset the data by MP
-  tmp=subset(bigData,stationname==name)
-  #Create a new filename for each MP - the folder 'mpExpenses2012' should already exist
-  fn=paste('bigData/',gsub(' ','',name),sep='')
-  #Save the CSV file containing separate expenses data for each MP
-  write.csv(tmp,fn,row.names=FALSE)
+# each row is a list (station/stop); dataset is a list of lists
+for (row in 1:NROW(dataset)) {
+  # print(dataset[[row]]$stationname[[1]][1])
+  write.csv(dataset[[row]], paste("./station_", gsub("/", "--",dataset[[row]]$stationname[[1]][1]), ".csv", sep = ""), row.names = FALSE)
 }
-
 
 
 
