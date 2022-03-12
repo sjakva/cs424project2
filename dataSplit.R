@@ -1,4 +1,7 @@
 bigData = read.csv("./CTA_-_Ridership_-__L__Station_Entries_-_Daily_Totals.csv")
+View(bigData["rides"])
+
+bigData["rides"] <- as.numeric(gsub(",", "", bigData["rides"]$rides))
 
 # turn overall excel sheet into a list of lists subsetted by station names
 dataset <- split(bigData, bigData$stationname)
