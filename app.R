@@ -29,16 +29,19 @@ stationsAll <- data.frame(
 )
 # View(stationsAll)
 
-
-tsvFiles = list.files(path = "./", pattern = "*.tsv", full.names = TRUE, recursive = FALSE)
-lapply(tsvFiles, function(x) {
-  # print(x)
-  tmpTable <- read.table(file = x, sep = "\t", header = TRUE, quote = "", fill = FALSE)
-  # View(tmpTable)
-  # tmpTable -> as.data.frame(tmpTable) 
-  rbind(tmpTable, stationsAll)
-})
-View(stationsAll)
+temp = list.files(pattern="*.tsv")
+allData = lapply(temp, read.delim)
+cta <- do.call(rbind, allData)
+view(cta)
+# tsvFiles = list.files(path = "./", pattern = "*.tsv", full.names = TRUE, recursive = FALSE)
+# lapply(tsvFiles, function(x) {
+#   # print(x)
+#   tmpTable <- read.table(file = x, sep = "\t", header = TRUE, quote = "", fill = FALSE)
+#   # View(tmpTable)
+#   # tmpTable -> as.data.frame(tmpTable) 
+#   rbind(tmpTable, stationsAll)
+# })
+# View(stationsAll)
 
 # stationsAll <- read.table(file = "./station_18th.tsv", sep = "\t", header = TRUE)
 # View(stationsAll)
@@ -51,7 +54,7 @@ View(stationsAll)
 #reading in data for halsted
 Halsted <-
   read.table(file = "./station_UIC-Halsted.tsv", sep = "\t", header = TRUE)
-View(Halsted)
+# View(Halsted)
 
 #converting date type to workable column
 newDate <- as.Date(Halsted$date, '%m/%d/%Y')
