@@ -122,47 +122,97 @@ ui <- dashboardPage(
         width = 12,
         
         
-        plotOutput("entryYear")
+        plotOutput("landingPage", height = 1100),
+        dateInput(
+          "inputDate",
+          "Select a date:",
+          '2021-08-23',
+          '2001-01-01',
+          '2021-11-30'
+        ),
+        actionButton("left", "<<"),
+        actionButton("right", ">>")
       )
     ),
     tabItem(
-    tabName = "about",
-    box(
-      title = "About",
-      solidHeader = TRUE,
-      status = "primary",
-      width = 12,
-      
-      
-      h2(
-        "Jack Martin created this app for Project 1 of UIC's CS 424 - Visual Analytics."
-      ),
-      p(
-        "This data is from the Chicago Data Portal. More specifically, the \'CTA - Ridership - L Station Entries - Daily total\'.
+      tabName = "about",
+      box(
+        title = "About",
+        solidHeader = TRUE,
+        status = "primary",
+        width = 12,
+        
+        
+        h2(
+          "Jack Martin created this app for Project 1 of UIC's CS 424 - Visual Analytics."
+        ),
+        p(
+          "This data is from the Chicago Data Portal. More specifically, the \'CTA - Ridership - L Station Entries - Daily total\'.
                            The main components on why we are given this project is to teach us and give better familiarity with\n
                           both the R language and Shiny and Shiny dashboard. We were tasked with analyzing and plotting Entries over\n
                           specific stations over 2001-2021 and over each Day of the Week and Month."
+        )
       )
     )
-  )))
+  ))
   
 )
 
 # Define server logic
 #   session as a param allows access to information and functionality relating to the session
-sumOfRidesPerYear = Halsted %>% group_by(year(newDate)) %>% summarise(sum = sum(rides))
+# newData <- stationsAll[stationsAll$date == as.Date('2021-08-23'),]
+# maxRides <- max(newData$rides)
+# view(newData)
 server <- function(input, output, session) {
-  output$entryYear <- renderPlot({
-    subset(Halsted, newDate > as.Date('2000-12-31')) %>%
-      ggplot(aes(x=year(newDate), y=rides)) +
-      geom_bar(stat = "identity", fill = "#88CCEE") +
-      labs(x = "Years", y = "Number of Entries", title = "Entries per Year") +
+  # changes dataset based on day
+  dateReactive <-
+    reactive({
+      subset(stationsAll, stationsAll$date == input$inputDate)
+    })
+  
+  # shifts data by one day in the past
+  observeEvent(input$left, {
+    updateDateInput(
+      session,
+      "inputDate",
+      value = input$inputDate - days(1),
+      min = '2001-01-01',
+      max = '2021-11-30'
+    )
+  })
+  # shifts data by one day in the future
+  observeEvent(input$right, {
+    updateDateInput(
+      session,
+      "inputDate",
+      value = input$inputDate + days(1),
+      min = '2001-01-01',
+      max = '2021-11-30'
+    )
+  })
+  
+  # ----------------------------
+  output$landingPage <- renderPlot({
+    newData <- dateReactive()
+    maxRides <- max(newData$rides)
+    subset(newData) %>%
+      ggplot(aes(x = rides, y = fct_rev(stationname))) +
+      geom_col(stat = "identity", fill = "#88CCEE") +
+      labs(x = "Number of entries", y = "Station name", title = "Entries on August 23, 2021") +
+      # geom_col() +
+      theme(
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        axis.line = element_line(colour = "black")
+      ) +
+      theme(axis.text.y = element_text(angle = 90, hjust = 1)) +
       theme_bw() +
-      scale_y_continuous(expand = c(0, 0), limits = c(0, max(sumOfRidesPerYear$sum) * 1.05))
+      scale_x_continuous(expand = c(0, 0),
+                         limits = c(0, maxRides * 1.05))
   })
   
 }
 
 # Run the application
 shinyApp(ui = ui, server = server)
-
