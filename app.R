@@ -20,10 +20,10 @@ library(DT)
 #------------------------------------
 #reading in data for halsted
 Halsted <-
-  read.table(file = "./station_UIC-Halsted.csv", sep = ",", header = TRUE)
+  read.table(file = "./station_UIC-Halsted.tsv", sep = "\t", header = TRUE)
 
 #converting date type to workable column
-newDate <- as.Date(Halsted$date, "%m/%d/%Y")
+newDate <- as.Date(Halsted$date, '%m/%d/%Y')
 Halsted$newDate <- newDate
 Halsted$date <- NULL
 years <- c(2001:2021)
@@ -42,10 +42,24 @@ ui <- dashboardPage(
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
+      menuItem("home", tabName = "home"),
       menuItem("About", tabName = "about")
     )
   ),
-  dashboardBody(tabItems(tabItem(
+  dashboardBody(tabItems(
+    tabItem(
+      tabName = "home",
+      box(
+        title = "home",
+        solidHeader = TRUE,
+        status = "primary",
+        width = 12,
+        
+        
+        plotOutput("entryYear")
+      )
+    ),
+    tabItem(
     tabName = "about",
     box(
       title = "About",
@@ -64,8 +78,7 @@ ui <- dashboardPage(
                           specific stations over 2001-2021 and over each Day of the Week and Month."
       )
     )
-  ))),
-  plotOutput("entryYear")
+  )))
   
 )
 
@@ -75,7 +88,7 @@ ui <- dashboardPage(
 server <- function(input, output, session) {
   output$entryYear <- renderPlot({
     subset(Halsted, newDate > as.Date("2000-12-31")) %>%
-      ggplot(aes(year(newDate), rides)) +
+      ggplot(aes(x=year(newDate), y=rides)) +
       geom_bar(stat = "identity", fill = "#88CCEE") +
       labs(x = "Years", y = "Number of Entries", title = "Entries per Year") +
       theme_bw() 
