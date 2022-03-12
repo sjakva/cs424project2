@@ -14,30 +14,20 @@ library(ggplot2)
 library(shinydashboard)
 library(plotly)
 library(leaflet)
+library(tidyverse)
+library(DT)
 
-# Define UI for application
-#   Should be a dashboard page, not fluid page
-# ui <- fluidPage(
-#
-#     # Application title
-#     titlePanel("Old Faithful Geyser Data"),
-#
-#     # Sidebar with a slider input for number of bins
-#     sidebarLayout(
-#         sidebarPanel(
-#             sliderInput("bins",
-#                         "Number of bins:",
-#                         min = 1,
-#                         max = 50,
-#                         value = 30)
-#         ),
-#
-#         # Show a plot of the generated distribution
-#         mainPanel(
-#            plotOutput("distPlot")
-#         )
-#     )
-# )
+#------------------------------------
+#reading in data for halsted
+Halsted <-
+  read.table(file = "./station_UIC-Halsted.csv", sep = ",", header = TRUE)
+
+#converting date type to workable column
+newDate <- as.Date(Halsted$date, "%m/%d/%Y")
+Halsted$newDate <- newDate
+Halsted$date <- NULL
+years <- c(2001:2021)
+
 ui <- dashboardPage(
   dashboardHeader(title = "Jack Martin and Shoaib Jakvani Project 2"),
   dashboardSidebar(
@@ -74,21 +64,24 @@ ui <- dashboardPage(
                           specific stations over 2001-2021 and over each Day of the Week and Month."
       )
     )
-  )))
+  ))),
+  plotOutput("entryYear")
   
 )
 
 # Define server logic
 #   session as a param allows access to information and functionality relating to the session
+# sumOfRidesPerYear = Halsted %>% group_by(year(newDate)) %>% summarise(sum = sum(rides))
 server <- function(input, output, session) {
-  # output$distPlot <- renderPlot({
-  #     # generate bins based on input$bins from ui.R
-  #     x    <- faithful[, 2]
-  #     bins <- seq(min(x), max(x), length.out = input$bins + 1)
-  #
-  #     # draw the histogram with the specified number of bins
-  #     hist(x, breaks = bins, col = 'darkgray', border = 'white')
-  # })
+  output$entryYear <- renderPlot({
+    subset(Halsted, newDate > as.Date("2000-12-31")) %>%
+      ggplot(aes(year(newDate), rides)) +
+      geom_bar(stat = "identity", fill = "#88CCEE") +
+      labs(x = "Years", y = "Number of Entries", title = "Entries per Year") +
+      theme_bw() 
+      # scale_y_continuous(expand = c(0, 0))#, limits = c(0, max(sumOfRidesPerYear$sum) * 1.05))
+  })
+  
 }
 
 # Run the application
