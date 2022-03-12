@@ -16,7 +16,8 @@ library(plotly)
 library(leaflet)
 library(tidyverse)
 library(DT)
-library(forcats)
+library(data.table)
+
 #------------------------------------
 # create intial dataframe
 stationsAll <- data.frame(
@@ -37,11 +38,50 @@ stationsAll <- do.call(rbind, dataStations)
 newD <- as.Date(stationsAll$date, '%m/%d/%Y')
 stationsAll$date <- NULL
 stationsAll$date <- newD
-# stationsAll %>% 
-#   rename(
-#     date = newD
-#     )
 view(stationsAll)
+
+# load in station id with long and lat
+xData <- fread("CTA_-_System_Information_-_List_of__L__Stops.csv",
+               select = c("MAP_ID", "Location"))
+
+
+ # Loops through every station id and prints out location
+locData <- data.frame(
+  MAP_ID=c(),
+  Location=c(),
+  Latitude=c(),
+  Longitude=c(),
+  stringsAsFactors = FALSE
+)
+
+for (row in 1:NROW(xData)) {
+  statID = xData[[1]][row]
+  print(statID)
+  locale <- xData[[2]][row]
+  locationString <- gsub("[(,)]", "", xData[[2]][row])
+  # print(locationString)
+  
+  lat <- word(locationString, 1, sep=fixed(' '))
+  long <- word(locationString, 2, sep=fixed(' '))
+  # print("lat is")
+  # print(lat)
+  # print("long is")
+  # print(long)
+  tempRow <- c(statID, locale, lat, long)
+  locData <- rbind(locData, tempRow)
+}
+names(locData) <- c("ï..station_id", "Location", "Latitude", "Longitude")
+view(locData)
+
+# d <- merge(stationsAll, locData)
+
+# d <- cbind(stationsAll, locData, by = "ï..station_id", names())
+# view(d)
+# for (row in 1:NROW(stationsAll)) {
+#   id <- stationsAll[[1]][row]
+#   print(id)
+#   
+#   }
 
 #reading in data for halsted
 Halsted <-
@@ -82,7 +122,7 @@ ui <- dashboardPage(
         width = 12,
         
         
-        plotOutput("landingPage",height = 1100)
+        plotOutput("entryYear")
       )
     ),
     tabItem(
@@ -110,23 +150,15 @@ ui <- dashboardPage(
 
 # Define server logic
 #   session as a param allows access to information and functionality relating to the session
-newData <- stationsAll[stationsAll$date == as.Date('2021-08-23'),] 
-maxRides <- max(newData$rides)
-view(newData)
+sumOfRidesPerYear = Halsted %>% group_by(year(newDate)) %>% summarise(sum = sum(rides))
 server <- function(input, output, session) {
-  # dateReactive <- reactive({subset(stationsAll, stationsAll$date == input$inputDate)})
-  
-  output$landingPage <- renderPlot({
-    subset(newData) %>%
-      ggplot(aes(x=rides, y= fct_rev(stationname))) +
-      geom_col(stat = "identity", fill = "#88CCEE") +
-      labs(x = "Number of entries", y = "Station name", title = "Entries on August 23, 2021") +
-      # geom_col() + 
-      theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-            panel.background = element_blank(), axis.line = element_line(colour = "black")) +
-      theme(axis.text.y = element_text(angle = 90, hjust = 1))+
+  output$entryYear <- renderPlot({
+    subset(Halsted, newDate > as.Date('2000-12-31')) %>%
+      ggplot(aes(x=year(newDate), y=rides)) +
+      geom_bar(stat = "identity", fill = "#88CCEE") +
+      labs(x = "Years", y = "Number of Entries", title = "Entries per Year") +
       theme_bw() +
-      scale_x_continuous(expand = c(0, 0), limits = c(0,maxRides * 1.05))
+      scale_y_continuous(expand = c(0, 0), limits = c(0, max(sumOfRidesPerYear$sum) * 1.05))
   })
   
 }
