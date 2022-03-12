@@ -38,7 +38,7 @@ stationsAll <- do.call(rbind, dataStations)
 newD <- as.Date(stationsAll$date, '%m/%d/%Y')
 stationsAll$date <- NULL
 stationsAll$date <- newD
-view(stationsAll)
+# view(stationsAll)
 
 # load in station id with long and lat
 xData <- fread("CTA_-_System_Information_-_List_of__L__Stops.csv",
@@ -63,15 +63,12 @@ for (row in 1:NROW(xData)) {
   
   lat <- word(locationString, 1, sep=fixed(' '))
   long <- word(locationString, 2, sep=fixed(' '))
-  # print("lat is")
-  # print(lat)
-  # print("long is")
-  # print(long)
+
   tempRow <- c(statID, locale, lat, long)
   locData <- rbind(locData, tempRow)
 }
 names(locData) <- c("ï..station_id", "Location", "Latitude", "Longitude")
-view(locData)
+# view(locData)
 
 # d <- merge(stationsAll, locData)
 
@@ -82,17 +79,6 @@ view(locData)
 #   print(id)
 #   
 #   }
-
-#reading in data for halsted
-Halsted <-
-  read.table(file = "./station_UIC-Halsted.tsv", sep = "\t", header = TRUE)
-# View(Halsted)
-
-#converting date type to workable column
-newDate <- as.Date(Halsted$date, '%m/%d/%Y')
-Halsted$newDate <- newDate
-Halsted$date <- NULL
-years <- c(2001:2021)
 
 ui <- dashboardPage(
   dashboardHeader(title = "Jack Martin and Shoaib Jakvani Project 2"),
@@ -160,9 +146,6 @@ ui <- dashboardPage(
 
 # Define server logic
 #   session as a param allows access to information and functionality relating to the session
-# newData <- stationsAll[stationsAll$date == as.Date('2021-08-23'),]
-# maxRides <- max(newData$rides)
-# view(newData)
 server <- function(input, output, session) {
   # changes dataset based on day
   dateReactive <-
