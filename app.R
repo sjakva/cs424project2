@@ -60,20 +60,28 @@ for (row in 1:NROW(xData)) {
   locale <- xData[[2]][row]
   locationString <- gsub("[(,)]", "", xData[[2]][row])
   # print(locationString)
+  
   lat <- word(locationString, 1, sep=fixed(' '))
   long <- word(locationString, 2, sep=fixed(' '))
-  print("lat is")
-  print(lat)
-  print("long is")
-  print(long)
-  # xData[statID][row]$lat <- lat
-  # xData[statID][row]$long <- long
+  # print("lat is")
+  # print(lat)
+  # print("long is")
+  # print(long)
   tempRow <- c(statID, locale, lat, long)
-  # names(tempRow) <- c("MAP_ID", "Location", "Latitude", "Longitude")
   locData <- rbind(locData, tempRow)
 }
-names(locData) <- c("MAP_ID", "Location", "Latitude", "Longitude")
+names(locData) <- c("ï..station_id", "Location", "Latitude", "Longitude")
 view(locData)
+
+# d <- merge(stationsAll, locData)
+
+# d <- cbind(stationsAll, locData, by = "ï..station_id", names())
+# view(d)
+# for (row in 1:NROW(stationsAll)) {
+#   id <- stationsAll[[1]][row]
+#   print(id)
+#   
+#   }
 
 #reading in data for halsted
 Halsted <-
