@@ -18,9 +18,40 @@ library(tidyverse)
 library(DT)
 
 #------------------------------------
+# create intial dataframe
+stationsAll <- data.frame(
+  ï..station_id=integer(),
+  stationname=character(),
+  date=character(),
+  daytype=character(),
+  rides=integer(),
+  stringsAsFactors = FALSE
+)
+# View(stationsAll)
+
+
+tsvFiles = list.files(path = "./", pattern = "*.tsv", full.names = TRUE, recursive = FALSE)
+lapply(tsvFiles, function(x) {
+  # print(x)
+  tmpTable <- read.table(file = x, sep = "\t", header = TRUE, quote = "", fill = FALSE)
+  # View(tmpTable)
+  # tmpTable -> as.data.frame(tmpTable) 
+  rbind(tmpTable, stationsAll)
+})
+View(stationsAll)
+
+# stationsAll <- read.table(file = "./station_18th.tsv", sep = "\t", header = TRUE)
+# View(stationsAll)
+# for (row in 1:NROW(dataset)) {
+#   # print(dataset[[row]]$stationname[[1]][1])
+#   # write.csv(dataset[[row]], paste("./station_", gsub("/", "--",dataset[[row]]$stationname[[1]][1]), ".csv", sep = ""), row.names = FALSE)
+#   write.table(dataset[[row]], file = paste("./station_", gsub("/", "--",dataset[[row]]$stationname[[1]][1]), ".tsv", sep = ""), row.names=FALSE, quote = FALSE, sep="\t")
+# }
+
 #reading in data for halsted
 Halsted <-
   read.table(file = "./station_UIC-Halsted.tsv", sep = "\t", header = TRUE)
+View(Halsted)
 
 #converting date type to workable column
 newDate <- as.Date(Halsted$date, '%m/%d/%Y')
