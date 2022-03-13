@@ -91,9 +91,6 @@ ui <- dashboardPage(
         actionButton("left", "<<"),
         actionButton("right", ">>"),
         leafletOutput("leafsussy")
-        # plotOutput("landingPageMin", height = 500),
-        # plotOutput("landingPageMax", height = 500)
-        # leafletOutput("chicago")
       
       )
     ),
@@ -290,7 +287,7 @@ server <- function(input, output, session) {
       # addProviderTiles(providers$Stamen.Toner) %>%
       # addMarkers(~long, ~lat ,popup = "sussy")
       addAwesomeMarkers( icon=awesome, lng = newData$long, lat = newData$lat, label = newData$stationname, popup = newData$stationname)#, markerOptions(opacity = 1))
-  })
+    })
 }
 
 # Run the application
