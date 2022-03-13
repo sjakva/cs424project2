@@ -90,9 +90,9 @@ ui <- dashboardPage(
         ),
         actionButton("left", "<<"),
         actionButton("right", ">>"),
-        # selectizeInput("markerSearch", "Search for a stop...", 
-        #                stationsAll$stationname, selected=NULL, multiple=TRUE
-        #                ),
+        # selectInput('markerSearch', "Search for a stop...",
+        #                stationsAll$stationname, selected=NULL, multiple=TRUE,
+        #                selectize=TRUE),
         leafletOutput("leafsussy")
       
       )
@@ -149,6 +149,8 @@ server <- function(input, output, session) {
     reactive({
       subset(stationsAll, stationsAll$date == input$inputDate)
     })
+  
+  # updateSelectizeInput(session, 'markerSearch', stationsAll$stationname, server=TRUE)
   
   # shifts data by one day in the past
   observeEvent(input$left, {
