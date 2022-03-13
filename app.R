@@ -90,6 +90,9 @@ ui <- dashboardPage(
         ),
         actionButton("left", "<<"),
         actionButton("right", ">>"),
+        # selectizeInput("markerSearch", "Search for a stop...", 
+        #                stationsAll$stationname, selected=NULL, multiple=TRUE
+        #                ),
         leafletOutput("leafsussy")
       
       )
