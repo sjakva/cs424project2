@@ -95,7 +95,8 @@ ui <- dashboardPage(
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
       menuItem("home", tabName = "home"),
-      menuItem("About", tabName = "about")
+      menuItem("About", tabName = "about"),
+      menuItem("sussy", tabName = "sussy")
     )
   ),
   dashboardBody(tabItems(
@@ -108,7 +109,7 @@ ui <- dashboardPage(
         width = 12,
         
         
-        plotOutput("landingPage", height = 1100),
+        plotOutput("landingPage", height = 500, width = 5000),
         dateInput(
           "inputDate",
           "Select a date:",
@@ -117,7 +118,9 @@ ui <- dashboardPage(
           '2021-11-30'
         ),
         actionButton("left", "<<"),
-        actionButton("right", ">>")
+        actionButton("right", ">>"),
+        # leafletOutput("chicago")
+      
       )
     ),
     tabItem(
@@ -139,7 +142,27 @@ ui <- dashboardPage(
                           specific stations over 2001-2021 and over each Day of the Week and Month."
         )
       )
+    ),
+    tabItem(
+      tabName = "sussy",
+      box(
+        title = "sussy",
+        solidHeader = TRUE,
+        status = "primary",
+        width = 12,
+        dataTableOutput("chartsus"),
+        dateInput(
+          "inputDate",
+          "Select a date:",
+          '2021-08-23',
+          '2001-01-01',
+          '2021-11-30'
+        ),
+        actionButton("left", "<<"),
+        actionButton("right", ">>")
+      )
     )
+
   ))
   
 )
@@ -176,25 +199,38 @@ server <- function(input, output, session) {
   
   # ----------------------------
   output$landingPage <- renderPlot({
+    react_title <- paste("Entries on", input$inputDate)
     newData <- dateReactive()
     maxRides <- max(newData$rides)
     subset(newData) %>%
-      ggplot(aes(x = rides, y = fct_rev(stationname))) +
+      ggplot(aes(y = rides, x = stationname)) +
       geom_col(stat = "identity", fill = "#88CCEE") +
-      labs(x = "Number of entries", y = "Station name", title = "Entries on August 23, 2021") +
+      labs(x = "Station Name", y = "Number of Entries", title = react_title) +
       # geom_col() +
       theme(
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
-        axis.line = element_line(colour = "black")
+        axis.line = element_line(colour = "black"),
+        axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)
       ) +
-      theme(axis.text.y = element_text(angle = 90, hjust = 1)) +
-      theme_bw() +
-      scale_x_continuous(expand = c(0, 0),
+      # theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)) +
+      # theme_bw() +
+      scale_y_continuous(expand = c(0, 0),
                          limits = c(0, maxRides * 1.05))
   })
-  
+  # 
+  output$chartsus <- DT::renderDataTable(
+    
+    DT::datatable({
+      newData <- dateReactive()
+      table_df <- data.frame(Stations=character(), Entries=integer())
+      rowdf <- data.frame(Stations=newData$stationname, Entries=newData$rides)
+      
+      table_df <- rbind(table_df, rowdf)
+      table_df
+    })
+  )
 }
 
 # Run the application
