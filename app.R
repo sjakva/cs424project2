@@ -40,6 +40,9 @@ stationsAll$date <- NULL
 stationsAll$date <- newD
 view(stationsAll)
 
+
+
+
 ui <- dashboardPage(
   dashboardHeader(title = "Jack Martin and Shoaib Jakvani Project 2"),
   dashboardSidebar(
@@ -63,13 +66,16 @@ ui <- dashboardPage(
     tabItem(
       tabName = "home",
       box(
-        title = "home",
+        title = "Entries For All Stations On Given Day",
         solidHeader = TRUE,
         status = "primary",
         width = 12,
         
         
-        plotOutput("landingPage", height = 500, width = 5000),
+        actionButton("std", "Alphabetical"),
+        actionButton("min", "Descending"),
+        actionButton("max", "Ascending"),
+        plotOutput("landingPage", height = 500),
         dateInput(
           "inputDate",
           "Select a date:",
@@ -79,6 +85,8 @@ ui <- dashboardPage(
         ),
         actionButton("left", "<<"),
         actionButton("right", ">>"),
+        # plotOutput("landingPageMin", height = 500),
+        # plotOutput("landingPageMax", height = 500)
         # leafletOutput("chicago")
       
       )
@@ -157,11 +165,91 @@ server <- function(input, output, session) {
     )
   })
   
+  observeEvent(input$std, {
+    # Standard view
+    # change/sort data to be alphabetical order 
+    output$landingPage <- renderPlot({
+      react_title <- paste("Entries on", input$inputDate)
+      newData <- dateReactive()
+      maxRides <- max(newData$rides)
+      if (input$min)
+        subset(newData) %>%
+        ggplot(aes(y = rides, x = stationname)) +
+        geom_col(stat = "identity", fill = "#88CCEE") +
+        labs(x = "Station Name", y = "Number of Entries", title = react_title) +
+        # geom_col() +
+        theme(
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank(),
+          axis.line = element_line(colour = "black"),
+          axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)
+        ) +
+        # theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)) +
+        # theme_bw() +
+        scale_y_continuous(expand = c(0, 0),
+                           limits = c(0, maxRides * 1.05))
+    })
+  })
+  
+  observeEvent(input$min, {
+    # Descending
+    # change/sort data to be minimum order 
+    output$landingPage <- renderPlot({
+      react_title <- paste("Entries on", input$inputDate)
+      newData <- dateReactive()
+      maxRides <- max(newData$rides)
+      subset(newData) %>%
+        ggplot(aes(y = rides, x = reorder(stationname, -rides, min))) +
+        geom_col(stat = "identity", fill = "#88CCEE") +
+        labs(x = "Station Name", y = "Number of Entries", title = react_title) +
+        # geom_col() +
+        theme(
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank(),
+          axis.line = element_line(colour = "black"),
+          axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)
+        ) +
+        # theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)) +
+        # theme_bw() +
+        scale_y_continuous(expand = c(0, 0),
+                           limits = c(0, maxRides * 1.05))
+    })
+  })
+  
+  observeEvent(input$max, {
+    # Ascending
+    # change/sort data to be maximum order 
+    output$landingPage <- renderPlot({
+      react_title <- paste("Entries on", input$inputDate)
+      newData <- dateReactive()
+      maxRides <- max(newData$rides)
+      subset(newData) %>%
+        ggplot(aes(y = rides, x = reorder(stationname, +rides, max))) +
+        geom_col(stat = "identity", fill = "#88CCEE") +
+        labs(x = "Station Name", y = "Number of Entries", title = react_title) +
+        # geom_col() +
+        theme(
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank(),
+          axis.line = element_line(colour = "black"),
+          axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)
+        ) +
+        # theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)) +
+        # theme_bw() +
+        scale_y_continuous(expand = c(0, 0),
+                           limits = c(0, maxRides * 1.05))
+    })
+  })
+  
   # ----------------------------
   output$landingPage <- renderPlot({
     react_title <- paste("Entries on", input$inputDate)
     newData <- dateReactive()
     maxRides <- max(newData$rides)
+    if (input$min)
     subset(newData) %>%
       ggplot(aes(y = rides, x = stationname)) +
       geom_col(stat = "identity", fill = "#88CCEE") +
@@ -179,7 +267,11 @@ server <- function(input, output, session) {
       scale_y_continuous(expand = c(0, 0),
                          limits = c(0, maxRides * 1.05))
   })
-  # 
+  
+  
+  
+  
+  # ----------------------------
   output$chartsus <- DT::renderDataTable(
     
     DT::datatable({
