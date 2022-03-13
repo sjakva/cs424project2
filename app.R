@@ -40,9 +40,6 @@ stationsAll$date <- NULL
 stationsAll$date <- newD
 # view(stationsAll)
 
-stationsName <- unique(stationsAll$stationname)
-view(stationsName)
-
 awesome <- makeAwesomeIcon(
   icon = "train",
   iconColor = "black",
@@ -95,10 +92,9 @@ ui <- dashboardPage(
         ),
         actionButton("left", "<<"),
         actionButton("right", ">>"),
-        tags$br(), tags$br(), # breakline
-        selectInput("markerSearch", "Search for a stop...",
-                    stationsName, selected=NULL, multiple=TRUE
-        ),
+        # selectizeInput("markerSearch", "Search for a stop...", 
+        #                stationsAll$stationname, selected=NULL, multiple=TRUE
+        #                ),
         leafletOutput("leafsussy"),
         selectInput("background","Select a background",selections, selected='Standard')
       
@@ -290,29 +286,36 @@ server <- function(input, output, session) {
   
   output$leafsussy <- renderLeaflet({
     newData <- dateReactive()
-    lat <- newData$lat
-    long <- newData$long
+    # lat <- newData$lat
+    # long <- newData$long
     leaflet(data = newData) %>%
       addTiles() %>%
+      setView(lng =  -87.6000, lat = 41.9291, zoom = 10) %>%
       # addProviderTiles(providers$Stamen.Toner) %>%
       # addMarkers(~long, ~lat ,popup = "sussy")
       addAwesomeMarkers( icon=awesome, lng = newData$long, lat = newData$lat, label = newData$stationname, popup = newData$stationname)#, markerOptions(opacity = 1))
-    })
+  })
   observe({
     newData <-dateReactive()
     if(input$background == 'Positron')
     {
       leafletProxy("leafsussy",data = newData) %>%
+        clearTiles() %>%
+        addTiles() %>%
         addProviderTiles(providers$CartoDB.Positron)
     }
     else if(input$background == 'TonerLines')
     {
       leafletProxy("leafsussy",data = newData) %>%
+        clearTiles() %>%
+        addTiles() %>%
         addProviderTiles(providers$Stamen.TonerLines)
     }
     else if(input$background == 'Standard')
     {
       leafletProxy("leafsussy",data = newData) %>%
+        clearTiles() %>%
+        addTiles() %>%
         addProviderTiles(providers$nlmaps.standaard) 
     }
     
