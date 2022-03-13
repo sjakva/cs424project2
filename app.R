@@ -299,16 +299,22 @@ server <- function(input, output, session) {
     if(input$background == 'Positron')
     {
       leafletProxy("leafsussy",data = newData) %>%
+        clearTiles() %>%
+        addTiles() %>%
         addProviderTiles(providers$CartoDB.Positron)
     }
     else if(input$background == 'TonerLines')
     {
       leafletProxy("leafsussy",data = newData) %>%
+        clearTiles() %>%
+        addTiles() %>%
         addProviderTiles(providers$Stamen.TonerLines)
     }
     else if(input$background == 'Standard')
     {
       leafletProxy("leafsussy",data = newData) %>%
+        clearTiles() %>%
+        addTiles() %>%
         addProviderTiles(providers$nlmaps.standaard) 
     }
     
