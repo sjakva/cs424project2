@@ -41,11 +41,13 @@ stationsAll$date <- newD
 # view(stationsAll)
 
 awesome <- makeAwesomeIcon(
-  icon = "fire",
+  icon = "train",
   iconColor = "black",
   markerColor = "blue",
   library = "fa"
 )
+
+selections <- c("Standard", "TonerLines","Positron")
 
 ui <- dashboardPage(
   skin = "black",
@@ -90,10 +92,11 @@ ui <- dashboardPage(
         ),
         actionButton("left", "<<"),
         actionButton("right", ">>"),
-        # selectInput('markerSearch', "Search for a stop...",
-        #                stationsAll$stationname, selected=NULL, multiple=TRUE,
-        #                selectize=TRUE),
-        leafletOutput("leafsussy")
+        # selectizeInput("markerSearch", "Search for a stop...", 
+        #                stationsAll$stationname, selected=NULL, multiple=TRUE
+        #                ),
+        leafletOutput("leafsussy"),
+        selectInput("background","Select a background",selections, selected='Standard')
       
       )
     ),
@@ -149,8 +152,6 @@ server <- function(input, output, session) {
     reactive({
       subset(stationsAll, stationsAll$date == input$inputDate)
     })
-  
-  # updateSelectizeInput(session, 'markerSearch', stationsAll$stationname, server=TRUE)
   
   # shifts data by one day in the past
   observeEvent(input$left, {
@@ -293,6 +294,25 @@ server <- function(input, output, session) {
       # addMarkers(~long, ~lat ,popup = "sussy")
       addAwesomeMarkers( icon=awesome, lng = newData$long, lat = newData$lat, label = newData$stationname, popup = newData$stationname)#, markerOptions(opacity = 1))
     })
+  observe({
+    newData <-dateReactive()
+    if(input$background == 'Positron')
+    {
+      leafletProxy("leafsussy",data = newData) %>%
+        addProviderTiles(providers$CartoDB.Positron)
+    }
+    else if(input$background == 'TonerLines')
+    {
+      leafletProxy("leafsussy",data = newData) %>%
+        addProviderTiles(providers$Stamen.TonerLines)
+    }
+    else if(input$background == 'Standard')
+    {
+      leafletProxy("leafsussy",data = newData) %>%
+        addProviderTiles(providers$nlmaps.standaard) 
+    }
+    
+  })
 }
 
 # Run the application
