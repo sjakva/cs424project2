@@ -48,6 +48,7 @@ awesome <- makeAwesomeIcon(
 )
 
 ui <- dashboardPage(
+  skin = "black",
   dashboardHeader(title = "Jack Martin and Shoaib Jakvani Project 2"),
   dashboardSidebar(
     disable = FALSE,
@@ -73,7 +74,7 @@ ui <- dashboardPage(
         title = "Entries For All Stations On Given Day",
         solidHeader = TRUE,
         status = "primary",
-        width = 12,
+        width = 12, background = "navy",
         
         
         actionButton("std", "Alphabetical"),
@@ -170,6 +171,8 @@ server <- function(input, output, session) {
     )
   })
   
+  # Three observe events that dictate whether the chart shows alphabetically, min, or max
+  # Alphabetical
   observeEvent(input$std, {
     # Standard view
     # change/sort data to be alphabetical order 
@@ -182,7 +185,6 @@ server <- function(input, output, session) {
         ggplot(aes(y = rides, x = stationname)) +
         geom_col(stat = "identity", fill = "#88CCEE") +
         labs(x = "Station Name", y = "Number of Entries", title = react_title) +
-        # geom_col() +
         theme(
           panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
@@ -190,13 +192,12 @@ server <- function(input, output, session) {
           axis.line = element_line(colour = "black"),
           axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)
         ) +
-        # theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)) +
-        # theme_bw() +
         scale_y_continuous(expand = c(0, 0),
                            limits = c(0, maxRides * 1.05))
     })
   })
   
+  # Minimum
   observeEvent(input$min, {
     # Descending
     # change/sort data to be minimum order 
@@ -208,7 +209,6 @@ server <- function(input, output, session) {
         ggplot(aes(y = rides, x = reorder(stationname, -rides, min))) +
         geom_col(stat = "identity", fill = "#88CCEE") +
         labs(x = "Station Name", y = "Number of Entries", title = react_title) +
-        # geom_col() +
         theme(
           panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
@@ -216,13 +216,12 @@ server <- function(input, output, session) {
           axis.line = element_line(colour = "black"),
           axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)
         ) +
-        # theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)) +
-        # theme_bw() +
         scale_y_continuous(expand = c(0, 0),
                            limits = c(0, maxRides * 1.05))
     })
   })
   
+  # Maximum
   observeEvent(input$max, {
     # Ascending
     # change/sort data to be maximum order 
@@ -234,7 +233,6 @@ server <- function(input, output, session) {
         ggplot(aes(y = rides, x = reorder(stationname, +rides, max))) +
         geom_col(stat = "identity", fill = "#88CCEE") +
         labs(x = "Station Name", y = "Number of Entries", title = react_title) +
-        # geom_col() +
         theme(
           panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
@@ -242,8 +240,6 @@ server <- function(input, output, session) {
           axis.line = element_line(colour = "black"),
           axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)
         ) +
-        # theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)) +
-        # theme_bw() +
         scale_y_continuous(expand = c(0, 0),
                            limits = c(0, maxRides * 1.05))
     })
@@ -258,7 +254,6 @@ server <- function(input, output, session) {
       ggplot(aes(y = rides, x = stationname)) +
       geom_col(stat = "identity", fill = "#88CCEE") +
       labs(x = "Station Name", y = "Number of Entries", title = react_title) +
-      # geom_col() +
       theme(
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -266,8 +261,6 @@ server <- function(input, output, session) {
         axis.line = element_line(colour = "black"),
         axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)
       ) +
-      # theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5)) +
-      # theme_bw() +
       scale_y_continuous(expand = c(0, 0),
                          limits = c(0, maxRides * 1.05))
   })
