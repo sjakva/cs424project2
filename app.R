@@ -249,7 +249,6 @@ server <- function(input, output, session) {
     react_title <- paste("Entries on", input$inputDate)
     newData <- dateReactive()
     maxRides <- max(newData$rides)
-    if (input$min)
     subset(newData) %>%
       ggplot(aes(y = rides, x = stationname)) +
       geom_col(stat = "identity", fill = "#88CCEE") +
