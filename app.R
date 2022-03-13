@@ -40,6 +40,9 @@ stationsAll$date <- NULL
 stationsAll$date <- newD
 # view(stationsAll)
 
+stationsName <- unique(stationsAll$stationname)
+view(stationsName)
+
 awesome <- makeAwesomeIcon(
   icon = "train",
   iconColor = "black",
@@ -92,9 +95,10 @@ ui <- dashboardPage(
         ),
         actionButton("left", "<<"),
         actionButton("right", ">>"),
-        # selectizeInput("markerSearch", "Search for a stop...", 
-        #                stationsAll$stationname, selected=NULL, multiple=TRUE
-        #                ),
+        tags$br(), tags$br(), # breakline
+        selectInput("markerSearch", "Search for a stop...",
+                    stationsName, selected=NULL, multiple=TRUE
+        ),
         leafletOutput("leafsussy"),
         selectInput("background","Select a background",selections, selected='Standard')
       
@@ -299,22 +303,16 @@ server <- function(input, output, session) {
     if(input$background == 'Positron')
     {
       leafletProxy("leafsussy",data = newData) %>%
-        clearTiles() %>%
-        addTiles() %>%
         addProviderTiles(providers$CartoDB.Positron)
     }
     else if(input$background == 'TonerLines')
     {
       leafletProxy("leafsussy",data = newData) %>%
-        clearTiles() %>%
-        addTiles() %>%
         addProviderTiles(providers$Stamen.TonerLines)
     }
     else if(input$background == 'Standard')
     {
       leafletProxy("leafsussy",data = newData) %>%
-        clearTiles() %>%
-        addTiles() %>%
         addProviderTiles(providers$nlmaps.standaard) 
     }
     
