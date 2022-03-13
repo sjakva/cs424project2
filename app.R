@@ -30,7 +30,7 @@ stationsAll <- data.frame(
 )
 # View(stationsAll)
 
-tsvFileList <- list.files(pattern="*.tsv")
+tsvFileList <- list.files(pattern="X*.txt")
 dataStations <- lapply(tsvFileList, read.delim)
 stationsAll <- do.call(rbind, dataStations)
 
@@ -38,47 +38,7 @@ stationsAll <- do.call(rbind, dataStations)
 newD <- as.Date(stationsAll$date, '%m/%d/%Y')
 stationsAll$date <- NULL
 stationsAll$date <- newD
-# view(stationsAll)
-
-# load in station id with long and lat
-xData <- fread("CTA_-_System_Information_-_List_of__L__Stops.csv",
-               select = c("MAP_ID", "Location"))
-
-
- # Loops through every station id and prints out location
-locData <- data.frame(
-  MAP_ID=c(),
-  Location=c(),
-  Latitude=c(),
-  Longitude=c(),
-  stringsAsFactors = FALSE
-)
-
-for (row in 1:NROW(xData)) {
-  statID = xData[[1]][row]
-  print(statID)
-  locale <- xData[[2]][row]
-  locationString <- gsub("[(,)]", "", xData[[2]][row])
-  # print(locationString)
-  
-  lat <- word(locationString, 1, sep=fixed(' '))
-  long <- word(locationString, 2, sep=fixed(' '))
-
-  tempRow <- c(statID, locale, lat, long)
-  locData <- rbind(locData, tempRow)
-}
-names(locData) <- c("ï..station_id", "Location", "Latitude", "Longitude")
-# view(locData)
-
-# d <- merge(stationsAll, locData)
-
-# d <- cbind(stationsAll, locData, by = "ï..station_id", names())
-# view(d)
-# for (row in 1:NROW(stationsAll)) {
-#   id <- stationsAll[[1]][row]
-#   print(id)
-#   
-#   }
+view(stationsAll)
 
 ui <- dashboardPage(
   dashboardHeader(title = "Jack Martin and Shoaib Jakvani Project 2"),
