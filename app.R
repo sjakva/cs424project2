@@ -38,10 +38,14 @@ stationsAll <- do.call(rbind, dataStations)
 newD <- as.Date(stationsAll$date, '%m/%d/%Y')
 stationsAll$date <- NULL
 stationsAll$date <- newD
-view(stationsAll)
+# view(stationsAll)
 
-
-
+awesome <- makeAwesomeIcon(
+  icon = "fire",
+  iconColor = "black",
+  markerColor = "blue",
+  library = "fa"
+)
 
 ui <- dashboardPage(
   dashboardHeader(title = "Jack Martin and Shoaib Jakvani Project 2"),
@@ -85,6 +89,7 @@ ui <- dashboardPage(
         ),
         actionButton("left", "<<"),
         actionButton("right", ">>"),
+        leafletOutput("leafsussy")
         # plotOutput("landingPageMin", height = 500),
         # plotOutput("landingPageMax", height = 500)
         # leafletOutput("chicago")
@@ -282,6 +287,17 @@ server <- function(input, output, session) {
       table_df
     })
   )
+  
+  output$leafsussy <- renderLeaflet({
+    newData <- dateReactive()
+    lat <- newData$lat
+    long <- newData$long
+    leaflet(data = newData) %>%
+      addTiles() %>%
+      # addProviderTiles(providers$Stamen.Toner) %>%
+      # addMarkers(~long, ~lat ,popup = "sussy")
+      addAwesomeMarkers( icon=awesome, lng = newData$long, lat = newData$lat, label = newData$stationname, popup = newData$stationname)#, markerOptions(opacity = 1))
+  })
 }
 
 # Run the application
