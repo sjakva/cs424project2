@@ -61,7 +61,7 @@ ui <- dashboardPage(
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
-      menuItem("home", tabName = "home"),
+      menuItem("home", tabName = "home", selected = TRUE),
       menuItem("About", tabName = "about"),
       menuItem("sussy", tabName = "sussy")
     )
