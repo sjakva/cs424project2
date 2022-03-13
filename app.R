@@ -38,7 +38,10 @@ stationsAll <- do.call(rbind, dataStations)
 newD <- as.Date(stationsAll$date, '%m/%d/%Y')
 stationsAll$date <- NULL
 stationsAll$date <- newD
-# view(stationsAll)
+view(stationsAll)
+
+stationsNames <- unique(stationsAll$stationname)
+view(stationsNames)
 
 awesome <- makeAwesomeIcon(
   icon = "train",
@@ -92,9 +95,9 @@ ui <- dashboardPage(
         ),
         actionButton("left", "<<"),
         actionButton("right", ">>"),
-        # selectizeInput("markerSearch", "Search for a stop...", 
-        #                stationsAll$stationname, selected=NULL, multiple=TRUE
-        #                ),
+        selectInput("markerSearch", "Search for a stop...",
+                    stationsNames, selected=NULL, multiple=TRUE
+                       ),
         leafletOutput("leafsussy"),
         selectInput("background","Select a background",selections, selected='Standard')
       
