@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41010	Rockwell	12/15/2017	W	1923	41.966115	-87.6941
 41010	Rockwell	12/1/2017	W	2067	41.966115	-87.6941
 41010	Rockwell	12/24/2017	U	379	41.966115	-87.6941

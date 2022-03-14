@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40660	Armitage	12/18/2017	W	4478	41.918217	-87.652644
 40660	Armitage	12/2/2017	A	3013	41.918217	-87.652644
 40660	Armitage	12/23/2017	A	1425	41.918217	-87.652644

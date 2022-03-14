@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41450	Chicago/State	12/27/2017	W	9639	41.896671	-87.628176
 41450	Chicago/State	12/14/2017	W	14262	41.896671	-87.628176
 41450	Chicago/State	12/12/2017	W	13980	41.896671	-87.628176

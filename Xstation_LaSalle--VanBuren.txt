@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40160	LaSalle/Van Buren	12/5/2017	W	3326	41.8768	-87.631739
 40160	LaSalle/Van Buren	12/30/2017	A	342	41.8768	-87.631739
 40160	LaSalle/Van Buren	12/24/2017	U	208	41.8768	-87.631739

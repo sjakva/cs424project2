@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40140	Skokie	2/1/2003	A	0	42.038951	-87.751919
 40140	Skokie	2/20/2001	W	2651	42.038951	-87.751919
 40140	Skokie	5/5/2004	W	2636	42.038951	-87.751919

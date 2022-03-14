@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41440	Addison-Brown	12/6/2017	W	2699	41.947028	-87.674642
 41440	Addison-Brown	12/21/2017	W	2437	41.947028	-87.674642
 41440	Addison-Brown	12/18/2017	W	2477	41.947028	-87.674642

@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40150	Pulaski-Cermak	12/16/2017	A	715	41.853732	-87.724311
 40150	Pulaski-Cermak	12/13/2017	W	1102	41.853732	-87.724311
 40150	Pulaski-Cermak	12/23/2017	A	639	41.853732	-87.724311

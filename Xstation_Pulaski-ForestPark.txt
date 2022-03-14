@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40920	Pulaski-Forest Park	12/25/2017	U	692	41.873797	-87.725663
 40920	Pulaski-Forest Park	12/10/2017	U	956	41.873797	-87.725663
 40920	Pulaski-Forest Park	12/1/2017	W	1839	41.873797	-87.725663

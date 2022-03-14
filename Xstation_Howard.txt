@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40900	Howard	12/29/2017	W	4159	42.019063	-87.672892
 40900	Howard	12/31/2017	U	2692	42.019063	-87.672892
 40900	Howard	12/10/2017	U	2967	42.019063	-87.672892

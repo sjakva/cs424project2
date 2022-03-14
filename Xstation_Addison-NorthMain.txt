@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41420	Addison-North Main	12/19/2017	W	6034	41.947428	-87.653626
 41420	Addison-North Main	12/6/2017	W	6136	41.947428	-87.653626
 41420	Addison-North Main	12/22/2017	W	4848	41.947428	-87.653626

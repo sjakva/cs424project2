@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40610	Ridgeland	12/25/2017	U	134	41.887159	-87.783661
 40610	Ridgeland	12/28/2017	W	789	41.887159	-87.783661
 40610	Ridgeland	12/22/2017	W	1117	41.887159	-87.783661

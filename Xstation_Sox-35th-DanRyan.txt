@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40190	Sox-35th-Dan Ryan	12/27/2017	W	2141	41.831191	-87.630636
 40190	Sox-35th-Dan Ryan	12/6/2017	W	4324	41.831191	-87.630636
 40190	Sox-35th-Dan Ryan	12/28/2017	W	2382	41.831191	-87.630636

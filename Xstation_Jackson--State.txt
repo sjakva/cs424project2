@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40560	Jackson/State	12/4/2017	W	8365	41.878153	-87.627596
 40560	Jackson/State	12/27/2017	W	4336	41.878153	-87.627596
 40560	Jackson/State	12/3/2017	U	2619	41.878153	-87.627596

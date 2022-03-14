@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40090	Damen-Brown	12/18/2017	W	2813	41.966286	-87.678639
 40090	Damen-Brown	12/14/2017	W	3005	41.966286	-87.678639
 40090	Damen-Brown	12/8/2017	W	2941	41.966286	-87.678639

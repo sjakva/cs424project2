@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41310	Paulina	12/10/2017	U	1001	41.943623	-87.670907
 41310	Paulina	12/13/2017	W	2805	41.943623	-87.670907
 41310	Paulina	12/8/2017	W	2858	41.943623	-87.670907

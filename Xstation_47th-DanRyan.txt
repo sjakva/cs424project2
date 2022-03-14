@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41230	47th-Dan Ryan	12/13/2017	W	2889	41.810318	-87.63094
 41230	47th-Dan Ryan	12/10/2017	U	1482	41.810318	-87.63094
 41230	47th-Dan Ryan	12/16/2017	A	2096	41.810318	-87.63094

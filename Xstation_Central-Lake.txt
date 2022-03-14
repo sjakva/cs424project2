@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40280	Central-Lake	12/2/2017	A	1270	41.887389	-87.76565
 40280	Central-Lake	12/3/2017	U	983	41.887390	-87.76566
 40280	Central-Lake	12/12/2017	W	1854	41.887391	-87.76567

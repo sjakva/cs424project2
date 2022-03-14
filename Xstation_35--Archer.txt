@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40120	35th/Archer	12/7/2017	W	3353	41.829353	-87.680622
 40120	35th/Archer	12/11/2017	W	3171	41.829353	-87.680622
 40120	35th/Archer	12/9/2017	A	1521	41.829353	-87.680622

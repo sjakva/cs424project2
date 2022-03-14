@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41050	Linden	12/29/2017	W	617	42.073153	-87.69073
 41050	Linden	12/22/2017	W	870	42.073153	-87.69073
 41050	Linden	12/1/2017	W	913	42.073153	-87.69073

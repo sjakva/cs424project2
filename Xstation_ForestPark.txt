@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40390	Forest Park	12/13/2017	W	3412	41.874257	-87.817318
 40390	Forest Park	12/21/2017	W	3182	41.874257	-87.817318
 40390	Forest Park	12/14/2017	W	3427	41.874257	-87.817318

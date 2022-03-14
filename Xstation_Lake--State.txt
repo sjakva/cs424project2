@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41660	Lake/State	12/30/2017	A	8615	41.884809	-87.627813
 41660	Lake/State	12/19/2017	W	20579	41.884809	-87.627813
 41660	Lake/State	12/1/2017	W	23640	41.884809	-87.627813

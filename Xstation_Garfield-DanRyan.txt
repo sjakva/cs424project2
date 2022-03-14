@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41170	Garfield-Dan Ryan	12/22/2017	W	3040	41.79542	-87.631157
 41170	Garfield-Dan Ryan	12/5/2017	W	3217	41.79542	-87.631157
 41170	Garfield-Dan Ryan	12/27/2017	W	2016	41.79542	-87.631157

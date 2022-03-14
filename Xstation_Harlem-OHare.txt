@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40750	Harlem-O'Hare	12/20/2017	W	2875	41.98227	-87.8089
 40750	Harlem-O'Hare	12/12/2017	W	2873	41.98227	-87.8089
 40750	Harlem-O'Hare	12/14/2017	W	2975	41.98227	-87.8089

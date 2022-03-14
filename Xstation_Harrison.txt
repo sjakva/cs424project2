@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41490	Harrison	12/30/2017	A	1627	41.874039	-87.627479
 41490	Harrison	12/2/2017	A	3086	41.874039	-87.627479
 41490	Harrison	12/27/2017	W	1653	41.874039	-87.627479

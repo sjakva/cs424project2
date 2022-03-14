@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41040	Kedzie-Cermak	12/18/2017	W	945	41.853964	-87.705408
 41040	Kedzie-Cermak	12/5/2017	W	1091	41.853964	-87.705408
 41040	Kedzie-Cermak	12/29/2017	W	801	41.853964	-87.705408

@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41400	Roosevelt	12/31/2017	U	4775	41.8675	-87.626667
 41400	Roosevelt	12/27/2017	W	6404	41.8675	-87.626667
 41400	Roosevelt	12/14/2017	W	10434	41.8675	-87.626667

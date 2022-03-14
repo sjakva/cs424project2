@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41350	Oak Park-Lake	12/21/2017	W	1532	41.886988	-87.793783
 41350	Oak Park-Lake	12/12/2017	W	1558	41.886988	-87.793783
 41350	Oak Park-Lake	12/26/2017	W	631	41.886988	-87.793783

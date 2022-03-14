@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41000	Cermak-Chinatown	12/18/2017	W	3636	41.853206	-87.630968
 41000	Cermak-Chinatown	12/4/2017	W	3842	41.853206	-87.630968
 41000	Cermak-Chinatown	12/21/2017	W	3701	41.853206	-87.630968

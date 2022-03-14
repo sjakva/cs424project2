@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40220	Western-Forest Park	12/23/2017	A	754	41.875478	-87.688436
 40220	Western-Forest Park	12/1/2017	W	1912	41.875478	-87.688436
 40220	Western-Forest Park	12/26/2017	W	731	41.875478	-87.688436

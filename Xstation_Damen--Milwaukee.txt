@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40590	Damen/Milwaukee	12/24/2017	U	1552	41.909744	-87.677437
 40590	Damen/Milwaukee	12/28/2017	W	3817	41.909744	-87.677437
 40590	Damen/Milwaukee	12/16/2017	A	4584	41.909744	-87.677437

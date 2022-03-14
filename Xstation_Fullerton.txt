@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41220	Fullerton	12/28/2017	W	4600	41.925051	-87.652866
 41220	Fullerton	12/17/2017	U	4237	41.925051	-87.652866
 41220	Fullerton	12/20/2017	W	8113	41.925051	-87.652866

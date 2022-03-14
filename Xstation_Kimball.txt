@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41290	Kimball	12/31/2017	U	1458	41.967901	-87.713065
 41290	Kimball	12/21/2017	W	3804	41.967901	-87.713065
 41290	Kimball	12/4/2017	W	4067	41.967901	-87.713065

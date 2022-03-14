@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41180	Kedzie-Brown	12/15/2017	W	2034	41.965996	-87.708821
 41180	Kedzie-Brown	12/22/2017	W	1791	41.965996	-87.708821
 41180	Kedzie-Brown	12/11/2017	W	1952	41.965996	-87.708821

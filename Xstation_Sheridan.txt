@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40080	Sheridan	12/7/2017	W	5232	41.953775	-87.654929
 40080	Sheridan	12/5/2017	W	5105	41.953775	-87.654929
 40080	Sheridan	12/30/2017	A	2127	41.953775	-87.654929

@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40760	Granville	12/5/2017	W	4230	41.993664	-87.659202
 40760	Granville	12/18/2017	W	3364	41.993664	-87.659202
 40760	Granville	12/28/2017	W	2308	41.993664	-87.659202

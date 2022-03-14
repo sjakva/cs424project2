@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40380	Clark/Lake	12/20/2017	W	20358	41.885737	-87.630886
 40380	Clark/Lake	12/10/2017	U	4973	41.885737	-87.630886
 40380	Clark/Lake	12/3/2017	U	5682	41.885737	-87.630886

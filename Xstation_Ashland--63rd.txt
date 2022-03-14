@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40290	Ashland/63rd	12/6/2017	W	1177	41.77886	-87.663766
 40290	Ashland/63rd	12/24/2017	U	509	41.77886	-87.663766
 40290	Ashland/63rd	12/9/2017	A	626	41.77886	-87.663766

@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40510	Garfield-South Elevated	12/22/2017	W	1042	41.795172	-87.618327
 40510	Garfield-South Elevated	12/24/2017	U	431	41.795172	-87.618327
 40510	Garfield-South Elevated	12/9/2017	A	688	41.795172	-87.618327

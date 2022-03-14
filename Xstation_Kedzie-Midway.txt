@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41150	Kedzie-Midway	12/2/2017	A	2150	41.804236	-87.704406
 41150	Kedzie-Midway	12/25/2017	U	484	41.804236	-87.704406
 41150	Kedzie-Midway	12/3/2017	U	1539	41.804236	-87.704406

@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40370	Washington/Dearborn	12/23/2017	A	6744	41.883164	-87.62944
 40370	Washington/Dearborn	12/25/2017	U	1696	41.883164	-87.62944
 40370	Washington/Dearborn	12/20/2017	W	13896	41.883164	-87.62944

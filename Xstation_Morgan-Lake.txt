@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41510	Morgan-Lake	12/22/2017	W	2425	41.885586	-87.652193
 41510	Morgan-Lake	12/6/2017	W	3045	41.885586	-87.652193
 41510	Morgan-Lake	12/2/2017	A	1947	41.885586	-87.652193

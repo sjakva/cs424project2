@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40020	Harlem-Lake	12/7/2017	W	3785	41.886848	-87.803176
 40020	Harlem-Lake	12/29/2017	W	2757	41.886848	-87.803176
 40020	Harlem-Lake	12/25/2017	U	585	41.886848	-87.803176

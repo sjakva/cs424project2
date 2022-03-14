@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40140	Dempster-Skokie	12/19/2017	W	1759	42.038951	-87.751919
 40140	Dempster-Skokie	12/10/2017	U	628	42.038951	-87.751919
 40140	Dempster-Skokie	12/6/2017	W	1892	42.038951	-87.751919

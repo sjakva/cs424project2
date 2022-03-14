@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41060	Ashland-Orange	12/14/2017	W	1648	41.839234	-87.665317
 41060	Ashland-Orange	12/9/2017	A	757	41.839234	-87.665317
 41060	Ashland-Orange	12/17/2017	U	644	41.839234	-87.665317

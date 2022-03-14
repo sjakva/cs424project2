@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40480	Cicero-Lake	12/10/2017	U	658	41.886519	-87.744698
 40480	Cicero-Lake	12/27/2017	W	781	41.886519	-87.744698
 40480	Cicero-Lake	12/7/2017	W	1188	41.886519	-87.744698

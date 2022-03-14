@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40870	Francisco	12/19/2017	W	1643	41.966046	-87.701644
 40870	Francisco	12/15/2017	W	1655	41.966046	-87.701644
 40870	Francisco	12/7/2017	W	1674	41.966046	-87.701644

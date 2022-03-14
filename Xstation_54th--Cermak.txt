@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40580	54th/Cermak	12/20/2017	W	2088	41.85177331	-87.75669201
 40580	54th/Cermak	12/12/2017	W	2108	41.85177331	-87.75669201
 40580	54th/Cermak	12/9/2017	A	1263	41.85177331	-87.75669201

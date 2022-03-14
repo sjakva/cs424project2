@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40050	Davis	12/28/2017	W	2144	42.04771	-87.683543
 40050	Davis	12/14/2017	W	3502	42.04771	-87.683543
 40050	Davis	12/26/2017	W	1626	42.04771	-87.683543

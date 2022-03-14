@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41250	Central-Evanston	12/20/2017	W	704	42.063987	-87.685617
 41250	Central-Evanston	12/15/2017	W	749	42.063987	-87.685617
 41250	Central-Evanston	12/27/2017	W	461	42.063987	-87.685617

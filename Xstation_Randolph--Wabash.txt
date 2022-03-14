@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40200	Randolph/Wabash	12/25/2017	U	0	41.884431	-87.626149
 40200	Randolph/Wabash	12/27/2017	W	0	41.884431	-87.626149
 40200	Randolph/Wabash	12/21/2017	W	0	41.884431	-87.626149

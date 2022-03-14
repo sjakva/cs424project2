@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40850	Library	12/25/2017	U	392	41.876862	-87.628196
 40850	Library	12/15/2017	W	3109	41.876862	-87.628196
 40850	Library	12/5/2017	W	3767	41.876862	-87.628196

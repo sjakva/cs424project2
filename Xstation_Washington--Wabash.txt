@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41700	Washington/Wabash	12/9/2017	A	5749	41.88322	-87.626189
 41700	Washington/Wabash	12/14/2017	W	10228	41.88322	-87.626189
 41700	Washington/Wabash	12/25/2017	U	1205	41.88322	-87.626189

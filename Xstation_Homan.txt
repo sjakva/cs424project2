@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41580	Homan	7/20/2001	W	0	41.884914	-87.711327
 41580	Homan	7/14/2001	A	0	41.884914	-87.711327
 41580	Homan	7/7/2001	A	0	41.884914	-87.711327

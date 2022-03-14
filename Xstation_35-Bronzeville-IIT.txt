@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41120	35-Bronzeville-IIT	12/15/2017	W	1405	41.831677	-87.625826
 41120	35-Bronzeville-IIT	12/23/2017	A	597	41.831677	-87.625826
 41120	35-Bronzeville-IIT	12/5/2017	W	1771	41.831677	-87.625826

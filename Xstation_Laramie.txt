@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40700	Laramie	12/1/2017	W	1233	41.887163	-87.754986
 40700	Laramie	12/19/2017	W	1224	41.887163	-87.754986
 40700	Laramie	12/5/2017	W	1211	41.887163	-87.754986

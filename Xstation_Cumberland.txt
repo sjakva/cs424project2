@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40230	Cumberland	12/8/2017	W	4589	41.984246	-87.838028
 40230	Cumberland	12/25/2017	U	639	41.984246	-87.838028
 40230	Cumberland	12/27/2017	W	2735	41.984246	-87.838028

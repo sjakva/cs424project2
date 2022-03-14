@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40500	Washington/State	10/26/2006	W	0	41.8837	-87.6278
 40500	Washington/State	2/23/2008	A	0	41.8837	-87.6278
 40500	Washington/State	4/22/2007	U	0	41.8837	-87.6278

@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41080	47th-South Elevated	12/18/2017	W	1148	41.809209	-87.618826
 41080	47th-South Elevated	12/7/2017	W	1142	41.809209	-87.618826
 41080	47th-South Elevated	12/21/2017	W	1130	41.809209	-87.618826

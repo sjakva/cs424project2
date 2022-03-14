@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40250	Kedzie-Homan-Forest Park	12/2/2017	A	1353	41.874341	-87.70604
 40250	Kedzie-Homan-Forest Park	12/17/2017	U	1184	41.874341	-87.70604
 40250	Kedzie-Homan-Forest Park	12/8/2017	W	2136	41.874341	-87.70604

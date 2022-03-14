@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40930	Midway Airport	12/27/2017	W	6658	41.78661	-87.737875
 40930	Midway Airport	12/7/2017	W	9034	41.78661	-87.737875
 40930	Midway Airport	12/28/2017	W	6639	41.78661	-87.737875

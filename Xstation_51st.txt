@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40130	51st	12/4/2017	W	1049	41.80209	-87.618487
 40130	51st	12/11/2017	W	982	41.80209	-87.618487
 40130	51st	12/31/2017	U	383	41.80209	-87.618487

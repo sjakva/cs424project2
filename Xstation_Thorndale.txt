@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40880	Thorndale	12/17/2017	U	1472	41.990259	-87.659076
 40880	Thorndale	12/16/2017	A	2135	41.990259	-87.659076
 40880	Thorndale	12/24/2017	U	1114	41.990259	-87.659076

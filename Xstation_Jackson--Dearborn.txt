@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40070	Jackson/Dearborn	12/8/2017	W	6495	41.878183	-87.629296
 40070	Jackson/Dearborn	12/22/2017	W	4334	41.878183	-87.629296
 40070	Jackson/Dearborn	12/10/2017	U	1691	41.878183	-87.629296

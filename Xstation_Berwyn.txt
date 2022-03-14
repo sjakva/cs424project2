@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40340	Berwyn	12/20/2017	W	3113	41.977984	-87.658668
 40340	Berwyn	12/21/2017	W	3010	41.977984	-87.658668
 40340	Berwyn	12/26/2017	W	1576	41.977984	-87.658668

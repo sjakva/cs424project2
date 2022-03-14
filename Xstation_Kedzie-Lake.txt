@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41070	Kedzie-Lake	12/3/2017	U	781	41.884321	-87.706155
 41070	Kedzie-Lake	12/29/2017	W	1197	41.884321	-87.706155
 41070	Kedzie-Lake	12/10/2017	U	743	41.884321	-87.706155

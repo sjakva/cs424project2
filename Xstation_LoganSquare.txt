@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41020	Logan Square	12/18/2017	W	7095	41.929728	-87.708541
 41020	Logan Square	12/2/2017	A	4518	41.929728	-87.708541
 41020	Logan Square	12/20/2017	W	7291	41.929728	-87.708541

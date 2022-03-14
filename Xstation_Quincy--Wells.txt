@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40040	Quincy/Wells	12/3/2017	U	1142	41.878723	-87.63374
 40040	Quincy/Wells	12/19/2017	W	8056	41.878723	-87.63374
 40040	Quincy/Wells	12/28/2017	W	5122	41.878723	-87.63374

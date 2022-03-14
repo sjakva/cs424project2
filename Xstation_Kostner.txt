@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40600	Kostner	12/7/2017	W	552	41.853751	-87.733258
 40600	Kostner	12/30/2017	A	226	41.853751	-87.733258
 40600	Kostner	12/19/2017	W	498	41.853751	-87.733258

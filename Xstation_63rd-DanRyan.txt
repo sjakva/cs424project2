@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40910	63rd-Dan Ryan	12/6/2017	W	3082	41.780536	-87.630952
 40910	63rd-Dan Ryan	12/20/2017	W	3006	41.780536	-87.630952
 40910	63rd-Dan Ryan	12/25/2017	U	1055	41.780536	-87.630952

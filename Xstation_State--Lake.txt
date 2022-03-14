@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40260	State/Lake	12/6/2017	W	12646	41.88574	-87.627835
 40260	State/Lake	12/11/2017	W	12074	41.88574	-87.627835
 40260	State/Lake	12/10/2017	U	4406	41.88574	-87.627835

@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40730	Washington/Wells	12/16/2017	A	1256	41.882695	-87.63378
 40730	Washington/Wells	12/4/2017	W	8589	41.882695	-87.63378
 40730	Washington/Wells	12/30/2017	A	765	41.882695	-87.63378

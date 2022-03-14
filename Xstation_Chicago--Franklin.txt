@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40710	Chicago/Franklin	12/23/2017	A	1736	41.89681	-87.635924
 40710	Chicago/Franklin	12/8/2017	W	7072	41.89681	-87.635924
 40710	Chicago/Franklin	12/22/2017	W	4686	41.89681	-87.635924

@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41480	Western-Brown	12/6/2017	W	4210	41.966163	-87.688502
 41480	Western-Brown	12/3/2017	U	2086	41.966163	-87.688502
 41480	Western-Brown	12/30/2017	A	1738	41.966163	-87.688502

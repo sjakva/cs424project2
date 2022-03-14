@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40780	Central Park	12/30/2017	A	528	41.853839	-87.714842
 40780	Central Park	12/5/2017	W	1254	41.853839	-87.714842
 40780	Central Park	12/2/2017	A	772	41.853839	-87.714842

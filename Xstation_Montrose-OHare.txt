@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41330	Montrose-O'Hare	12/21/2017	W	2522	41.961539	-87.743574
 41330	Montrose-O'Hare	12/3/2017	U	1052	41.961539	-87.743574
 41330	Montrose-O'Hare	12/13/2017	W	2758	41.961539	-87.743574

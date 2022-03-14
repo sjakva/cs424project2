@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40270	Main	12/16/2017	A	887	42.033456	-87.679538
 40270	Main	12/31/2017	U	398	42.033456	-87.679538
 40270	Main	12/21/2017	W	1093	42.033456	-87.679538

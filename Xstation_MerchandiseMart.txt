@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40460	Merchandise Mart	12/30/2017	A	1028	41.888969	-87.633924
 40460	Merchandise Mart	12/14/2017	W	7894	41.888969	-87.633924
 40460	Merchandise Mart	12/1/2017	W	7965	41.888969	-87.633924

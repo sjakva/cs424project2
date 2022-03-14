@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40810	Medical Center	12/24/2017	U	307	41.875706	-87.673932
 40810	Medical Center	12/5/2017	W	2452	41.875706	-87.673932
 40810	Medical Center	12/25/2017	U	240	41.875706	-87.673932

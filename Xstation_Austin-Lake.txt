@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41260	Austin-Lake	12/8/2017	W	1858	41.887293	-87.774135
 41260	Austin-Lake	12/4/2017	W	1905	41.887293	-87.774135
 41260	Austin-Lake	12/22/2017	W	1677	41.887293	-87.774135

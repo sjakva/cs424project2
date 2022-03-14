@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40310	Western-Orange	12/25/2017	U	541	41.804546	-87.684019
 40310	Western-Orange	12/14/2017	W	3834	41.804546	-87.684019
 40310	Western-Orange	12/27/2017	W	2313	41.804546	-87.684019

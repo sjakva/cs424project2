@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40300	Indiana	12/18/2017	W	802	41.821732	-87.621371
 40300	Indiana	12/13/2017	W	887	41.821732	-87.621371
 40300	Indiana	12/15/2017	W	859	41.821732	-87.621371

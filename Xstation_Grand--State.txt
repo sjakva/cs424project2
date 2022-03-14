@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40330	Grand/State	12/21/2017	W	10683	41.891665	-87.628021
 40330	Grand/State	12/17/2017	U	7405	41.891665	-87.628021
 40330	Grand/State	12/7/2017	W	10763	41.891665	-87.628021

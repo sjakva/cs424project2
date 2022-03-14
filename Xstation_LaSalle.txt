@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41340	LaSalle	12/16/2017	A	1212	41.875568	-87.631722
 41340	LaSalle	12/26/2017	W	1236	41.875568	-87.631722
 41340	LaSalle	12/5/2017	W	3337	41.875568	-87.631722

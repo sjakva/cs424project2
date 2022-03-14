@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41090	Monroe/State	12/3/2017	U	3127	41.880745	-87.627696
 41090	Monroe/State	12/23/2017	A	3525	41.880745	-87.627696
 41090	Monroe/State	12/2/2017	A	4629	41.880745	-87.627696

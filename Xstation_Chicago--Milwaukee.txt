@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41410	Chicago/Milwaukee	12/28/2017	W	2542	41.896075	-87.655214
 41410	Chicago/Milwaukee	12/31/2017	U	1017	41.896075	-87.655214
 41410	Chicago/Milwaukee	12/7/2017	W	4495	41.896075	-87.655214

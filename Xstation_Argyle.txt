@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41200	Argyle	12/30/2017	A	1716	41.973453	-87.65853
 41200	Argyle	12/7/2017	W	3111	41.973453	-87.65853
 41200	Argyle	12/9/2017	A	2349	41.973453	-87.65853

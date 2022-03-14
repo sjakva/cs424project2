@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40170	Ashland-Lake	12/1/2017	W	2568	41.885269	-87.666969
 40170	Ashland-Lake	12/28/2017	W	1457	41.885269	-87.666969
 40170	Ashland-Lake	12/29/2017	W	1547	41.885269	-87.666969

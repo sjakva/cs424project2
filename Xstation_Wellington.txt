@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41210	Wellington	12/7/2017	W	3210	41.936033	-87.653266
 41210	Wellington	12/3/2017	U	900	41.936033	-87.653266
 41210	Wellington	12/9/2017	A	1455	41.936033	-87.653266

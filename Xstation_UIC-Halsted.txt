@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40350	UIC-Halsted	12/8/2017	W	7462	41.875474	-87.649707
 40350	UIC-Halsted	12/30/2017	A	837	41.875474	-87.649707
 40350	UIC-Halsted	12/13/2017	W	5828	41.875474	-87.649707

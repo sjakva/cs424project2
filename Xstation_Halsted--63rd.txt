@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40940	Halsted/63rd	12/15/2017	W	635	41.778943	-87.644244
 40940	Halsted/63rd	12/29/2017	W	420	41.778943	-87.644244
 40940	Halsted/63rd	12/7/2017	W	644	41.778943	-87.644244

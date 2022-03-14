@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40010	Austin-Forest Park	12/3/2017	U	641	41.870851	-87.776812
 40010	Austin-Forest Park	12/28/2017	W	1155	41.870851	-87.776812
 40010	Austin-Forest Park	12/13/2017	W	1916	41.870851	-87.776812

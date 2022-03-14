@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40540	Wilson	12/22/2017	W	4861	41.964273	-87.657588
 40540	Wilson	12/17/2017	U	2858	41.964273	-87.657588
 40540	Wilson	12/12/2017	W	6215	41.964273	-87.657588

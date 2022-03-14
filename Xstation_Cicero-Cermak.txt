@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40420	Cicero-Cermak	12/2/2017	A	932	41.85182	-87.745336
 40420	Cicero-Cermak	12/14/2017	W	1191	41.85182	-87.745336
 40420	Cicero-Cermak	12/27/2017	W	844	41.85182	-87.745336

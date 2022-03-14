@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40960	Pulaski-Orange	12/20/2017	W	5037	41.799756	-87.724493
 40960	Pulaski-Orange	12/25/2017	U	528	41.799756	-87.724493
 40960	Pulaski-Orange	12/30/2017	A	1507	41.799756	-87.724493

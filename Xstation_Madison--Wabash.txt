@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40640	Madison/Wabash	12/5/2017	W	0	41.882023	-87.626098
 40640	Madison/Wabash	12/3/2017	U	0	41.882023	-87.626098
 40640	Madison/Wabash	12/11/2017	W	0	41.882023	-87.626098

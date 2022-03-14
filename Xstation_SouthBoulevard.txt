@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40840	South Boulevard	12/27/2017	W	391	42.027612	-87.678329
 40840	South Boulevard	12/8/2017	W	763	42.027612	-87.678329
 40840	South Boulevard	12/26/2017	W	324	42.027612	-87.678329

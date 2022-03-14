@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40790	Monroe/Dearborn	12/4/2017	W	8266	41.880703	-87.629378
 40790	Monroe/Dearborn	12/21/2017	W	7520	41.880703	-87.629378
 40790	Monroe/Dearborn	12/19/2017	W	7961	41.880703	-87.629378

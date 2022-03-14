@@ -5,10 +5,10 @@ account: sjakva
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5843823
-bundleId: 5679101
+bundleId: 5679174
 url: https://sjakva.shinyapps.io/cs424project2/
-when: 1647219136.10585
-lastSyncTime: 1647219136.10585
+when: 1647221248.17314
+lastSyncTime: 1647221248.17314
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: .RData
+ignoredFiles: .RData|backups

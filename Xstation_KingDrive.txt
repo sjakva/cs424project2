@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41140	King Drive	12/23/2017	A	332	41.78013	-87.615546
 41140	King Drive	12/8/2017	W	532	41.78013	-87.615546
 41140	King Drive	12/30/2017	A	248	41.78013	-87.615546

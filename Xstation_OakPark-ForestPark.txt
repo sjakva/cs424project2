@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40180	Oak Park-Forest Park	12/17/2017	U	442	41.872108	-87.791602
 40180	Oak Park-Forest Park	12/19/2017	W	1770	41.872108	-87.791602
 40180	Oak Park-Forest Park	12/3/2017	U	553	41.872108	-87.791602

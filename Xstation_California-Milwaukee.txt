@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40570	California/Milwaukee	12/2/2017	A	3499	41.921939	-87.69689
 40570	California/Milwaukee	12/13/2017	W	5533	41.921939	-87.69689
 40570	California/Milwaukee	12/10/2017	U	2298	41.921939	-87.69689

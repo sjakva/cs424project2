@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40430	Clinton-Forest Park	12/27/2017	W	2495	41.875539	-87.640984
 40430	Clinton-Forest Park	12/7/2017	W	3748	41.875539	-87.640984
 40430	Clinton-Forest Park	12/3/2017	U	1142	41.875539	-87.640984

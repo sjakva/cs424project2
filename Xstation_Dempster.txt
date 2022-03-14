@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40690	Dempster	12/3/2017	U	499	42.041655	-87.681602
 40690	Dempster	12/24/2017	U	326	42.041655	-87.681602
 40690	Dempster	12/18/2017	W	696	42.041655	-87.681602

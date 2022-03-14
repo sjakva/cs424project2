@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40360	Southport	12/11/2017	W	3468	41.943744	-87.663619
 40360	Southport	12/3/2017	U	1617	41.943744	-87.663619
 40360	Southport	12/12/2017	W	3616	41.943744	-87.663619

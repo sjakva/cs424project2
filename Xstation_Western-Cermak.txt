@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40740	Western-Cermak	12/28/2017	W	818	41.854225	-87.685129
 40740	Western-Cermak	12/12/2017	W	1148	41.854225	-87.685129
 40740	Western-Cermak	12/8/2017	W	1293	41.854225	-87.685129

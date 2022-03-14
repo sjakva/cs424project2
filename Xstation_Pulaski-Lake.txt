@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40030	Pulaski-Lake	12/24/2017	U	595	41.885412	-87.725404
 40030	Pulaski-Lake	12/27/2017	W	860	41.885412	-87.725404
 40030	Pulaski-Lake	12/11/2017	W	1280	41.885412	-87.725404

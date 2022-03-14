@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41460	Irving Park-Brown	12/7/2017	W	3459	41.954521	-87.674868
 41460	Irving Park-Brown	12/24/2017	U	460	41.954521	-87.674868
 41460	Irving Park-Brown	12/27/2017	W	1608	41.954521	-87.674868

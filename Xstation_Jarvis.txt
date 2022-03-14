@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41190	Jarvis	12/26/2017	W	778	42.015876	-87.669092
 41190	Jarvis	12/16/2017	A	1236	42.015876	-87.669092
 41190	Jarvis	12/6/2017	W	1640	42.015876	-87.669092

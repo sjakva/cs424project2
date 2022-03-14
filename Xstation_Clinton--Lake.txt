@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41160	Clinton-Lake	12/31/2017	U	621	41.885678	-87.641782
 41160	Clinton-Lake	12/22/2017	W	2905	41.885678	-87.641782
 41160	Clinton-Lake	12/28/2017	W	2661	41.885678	-87.641782

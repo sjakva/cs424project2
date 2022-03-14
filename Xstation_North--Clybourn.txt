@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40650	North/Clybourn	12/1/2017	W	6229	41.910655	-87.649177
 40650	North/Clybourn	12/7/2017	W	5708	41.910655	-87.649177
 40650	North/Clybourn	12/3/2017	U	3883	41.910655	-87.649177

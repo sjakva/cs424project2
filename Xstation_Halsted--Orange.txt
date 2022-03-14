@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 41130	Halsted-Orange	12/24/2017	U	644	41.84678	-87.648088
 41130	Halsted-Orange	12/14/2017	W	2586	41.84678	-87.648088
 41130	Halsted-Orange	12/9/2017	A	1085	41.84678	-87.648088

@@ -1,4 +1,4 @@
-�..station_id	stationname	date	daytype	rides	lat	long
+﻿ï..station_id	stationname	date	daytype	rides	lat	long
 40490	Grand/Milwaukee	12/19/2017	W	2583	41.891189	-87.647578
 40490	Grand/Milwaukee	12/18/2017	W	2579	41.891189	-87.647578
 40490	Grand/Milwaukee	12/25/2017	U	279	41.891189	-87.647578
