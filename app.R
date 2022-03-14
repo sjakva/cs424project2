@@ -118,13 +118,13 @@ ui <- dashboardPage(
         
         
         h2(
-          "Jack Martin created this app for Project 1 of UIC's CS 424 - Visual Analytics."
+          "Jack Martin and Shoaib Jakvani created this app for Project 2 of UIC's CS 424 - Visual Analytics."
         ),
         p(
           "This data is from the Chicago Data Portal. More specifically, the \'CTA - Ridership - L Station Entries - Daily total\'.
                            The main components on why we are given this project is to teach us and give better familiarity with\n
-                          both the R language and Shiny and Shiny dashboard. We were tasked with analyzing and plotting Entries over\n
-                          specific stations over 2001-2021 and over each Day of the Week and Month."
+                          both the R language and Shiny and Shiny dashboard and also using leaflet and its applications. We were tasked with analyzing and plotting Entries over\n
+                          specific stations over 2001-2021 and plotting graphs from Project one for each station upon interacting with the leaflet map."
         )
       )
     ),
