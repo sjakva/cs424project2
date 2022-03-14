@@ -30,13 +30,15 @@ stationsAll <- data.frame(
 )
 # View(stationsAll)
 
+# Check directory and read all files following the pattern 
 tsvFileList <- list.files(pattern="X*.txt")
 dataStations <- lapply(tsvFileList, function(x) {
   read.delim(x, encoding = 'UTF-8-BOM')
   })
+# bind data to one df
 stationsAll <- do.call(rbind, dataStations)
 
-
+# make date usable
 newD <- as.Date(stationsAll$date, '%m/%d/%Y')
 stationsAll$date <- NULL
 stationsAll$date <- newD
@@ -45,13 +47,13 @@ view(stationsAll)
 stationsNames <- unique(stationsAll$stationname)
 view(stationsNames)
 
+# marker for leaflet
 awesome <- makeAwesomeIcon(
   icon = "train",
   iconColor = "black",
   markerColor = "blue",
   library = "fa"
 )
-
 selections <- c("Standard", "TonerLines","Positron")
 
 #------------------------------------
@@ -70,9 +72,9 @@ ui <- dashboardPage(
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
       menuItem("", tabName = "cheapBlankSpace", icon = NULL),
-      menuItem("home", tabName = "home", selected = TRUE),
+      menuItem("Home", tabName = "home", selected = TRUE),
       menuItem("About", tabName = "about"),
-      menuItem("sussy", tabName = "sussy")
+      menuItem("Table", tabName = "sussy")
     )
   ),
   dashboardBody(tabItems(
@@ -129,7 +131,7 @@ ui <- dashboardPage(
     tabItem(
       tabName = "sussy",
       box(
-        title = "sussy",
+        title = "Table",
         solidHeader = TRUE,
         status = "primary",
         width = 12,
