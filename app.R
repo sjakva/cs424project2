@@ -21,7 +21,7 @@ library(data.table)
 #------------------------------------
 # create intial dataframe
 stationsAll <- data.frame(
-  ï..station_id=integer(),
+  station_id=integer(),
   stationname=character(),
   date=character(),
   daytype=character(),
@@ -31,7 +31,9 @@ stationsAll <- data.frame(
 # View(stationsAll)
 
 tsvFileList <- list.files(pattern="X*.txt")
-dataStations <- lapply(tsvFileList, read.delim)
+dataStations <- lapply(tsvFileList, function(x) {
+  read.delim(x, encoding = 'UTF-8-BOM')
+  })
 stationsAll <- do.call(rbind, dataStations)
 
 
@@ -52,6 +54,7 @@ awesome <- makeAwesomeIcon(
 
 selections <- c("Standard", "TonerLines","Positron")
 
+#------------------------------------
 ui <- dashboardPage(
   skin = "black",
   dashboardHeader(title = "Jack Martin and Shoaib Jakvani Project 2"),
@@ -80,8 +83,8 @@ ui <- dashboardPage(
         solidHeader = TRUE,
         status = "primary",
         width = 12, background = "navy",
-        
-        
+
+
         actionButton("std", "Alphabetical"),
         actionButton("min", "Descending"),
         actionButton("max", "Ascending"),
@@ -100,7 +103,7 @@ ui <- dashboardPage(
                        ),
         leafletOutput("leafsussy"),
         selectInput("background","Select a background",selections, selected='Standard')
-      
+
       )
     ),
     tabItem(
@@ -138,8 +141,8 @@ ui <- dashboardPage(
           '2001-01-01',
           '2021-11-30'
         ),
-        actionButton("left", "<<"),
-        actionButton("right", ">>")
+        actionButton("left2", "<<"),
+        actionButton("right2", ">>")
       )
     )
 
@@ -147,6 +150,7 @@ ui <- dashboardPage(
   
 )
 
+#------------------------------------
 # Define server logic
 #   session as a param allows access to information and functionality relating to the session
 server <- function(input, output, session) {
@@ -155,7 +159,7 @@ server <- function(input, output, session) {
     reactive({
       subset(stationsAll, stationsAll$date == input$inputDate)
     })
-  
+
   # shifts data by one day in the past
   observeEvent(input$left, {
     updateDateInput(
@@ -177,11 +181,33 @@ server <- function(input, output, session) {
     )
   })
   
+  
+  # shifts data by one day in the past
+  observeEvent(input$left2, {
+    updateDateInput(
+      session,
+      "inputDate",
+      value = input$inputDate - days(1),
+      min = '2001-01-01',
+      max = '2021-11-30'
+    )
+  })
+  # shifts data by one day in the future
+  observeEvent(input$right2, {
+    updateDateInput(
+      session,
+      "inputDate",
+      value = input$inputDate + days(1),
+      min = '2001-01-01',
+      max = '2021-11-30'
+    )
+  })
+
   # Three observe events that dictate whether the chart shows alphabetically, min, or max
   # Alphabetical
   observeEvent(input$std, {
     # Standard view
-    # change/sort data to be alphabetical order 
+    # change/sort data to be alphabetical order
     output$landingPage <- renderPlot({
       react_title <- paste("Entries on", input$inputDate)
       newData <- dateReactive()
@@ -202,11 +228,11 @@ server <- function(input, output, session) {
                            limits = c(0, maxRides * 1.05))
     })
   })
-  
+
   # Minimum
   observeEvent(input$min, {
     # Descending
-    # change/sort data to be minimum order 
+    # change/sort data to be minimum order
     output$landingPage <- renderPlot({
       react_title <- paste("Entries on", input$inputDate)
       newData <- dateReactive()
@@ -226,11 +252,11 @@ server <- function(input, output, session) {
                            limits = c(0, maxRides * 1.05))
     })
   })
-  
+
   # Maximum
   observeEvent(input$max, {
     # Ascending
-    # change/sort data to be maximum order 
+    # change/sort data to be maximum order
     output$landingPage <- renderPlot({
       react_title <- paste("Entries on", input$inputDate)
       newData <- dateReactive()
@@ -250,7 +276,7 @@ server <- function(input, output, session) {
                            limits = c(0, maxRides * 1.05))
     })
   })
-  
+
   # ----------------------------
   output$landingPage <- renderPlot({
     react_title <- paste("Entries on", input$inputDate)
@@ -270,23 +296,23 @@ server <- function(input, output, session) {
       scale_y_continuous(expand = c(0, 0),
                          limits = c(0, maxRides * 1.05))
   })
-  
-  
-  
-  
+
+
+
+
   # ----------------------------
   output$chartsus <- DT::renderDataTable(
-    
+
     DT::datatable({
       newData <- dateReactive()
       table_df <- data.frame(Stations=character(), Entries=integer())
       rowdf <- data.frame(Stations=newData$stationname, Entries=newData$rides)
-      
+
       table_df <- rbind(table_df, rowdf)
       table_df
     })
   )
-  
+
   output$leafsussy <- renderLeaflet({
     newData <- dateReactive()
     # lat <- newData$lat
@@ -319,9 +345,9 @@ server <- function(input, output, session) {
       leafletProxy("leafsussy",data = newData) %>%
         clearTiles() %>%
         addTiles() %>%
-        addProviderTiles(providers$nlmaps.standaard) 
+        addProviderTiles(providers$nlmaps.standaard)
     }
-    
+
   })
 }
 
